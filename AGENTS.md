@@ -77,6 +77,11 @@ gamesung/
 - Reference the issue: "Closes #<number>"
 - Keep PRs small and focused
 
+### 7. Push
+
+- Push the working branch with `git push origin <branch-name>` (NOT `git push dev-rkb`, which is the contributor's personal fork and requires separate credentials).
+- Stop after pushing. Do not open a PR, do not merge, do not push to other remotes.
+
 ## Forbidden Actions
 
 - Do not commit secrets, API keys, or credentials
