@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { Chessboard } from "@/components/chess/Chessboard";
 import { createBotGame } from "@/lib/chess-api";
+import { MoveList } from "@/components/chess/MoveList";
 
 const WS_BASE = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000";
 
@@ -172,9 +173,7 @@ export default function ChessPage() {
       />
 
       {currentGameState.moves.length > 0 && (
-        <div className="move-list">
-          <strong>Moves:</strong> {currentGameState.moves.join(" ")}
-        </div>
+        <MoveList moves={currentGameState.moves} />
       )}
 
       {error && <p className="error">{error}</p>}
